@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>test belaid</h1>
+    <?php
+  echo "premier projet devops";
+    ?>
 </body>
 </html>
