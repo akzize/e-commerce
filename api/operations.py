@@ -1,11 +1,10 @@
-# mongodb://admin:<password>@ac-w5c1nlz-shard-00-00.hgmbsol.mongodb.net:27017,ac-w5c1nlz-shard-00-01.hgmbsol.mongodb.net:27017,ac-w5c1nlz-shard-00-02.hgmbsol.mongodb.net:27017/?ssl=true&replicaSet=atlas-esswk6-shard-0&authSource=admin&retryWrites=true&w=majority
 import pymongo
 
 #? connect to mongodb
 # conn = pymongo.MongoClient("mongodb+srv://admin:ecommerce_database_2023@database.2dpqfnt.mongodb.net/")
 conn = pymongo.MongoClient("mongodb://localhost:27000/")
 
-# #? database
+#? database
 db = conn["ecommerce"]
 
 #? collection
@@ -16,7 +15,8 @@ products_collection = db["products"]
 
 #? create
 def create(data):
-    products_collection.insert_one({'_id': get_next_sequence_value('product_id'), **data})
+    newProduct = products_collection.insert_one({'_id': get_next_sequence_value('product_id'), **data})
+    return newProduct.inserted_id
 
 #? read
 def read_all_products(id=None):
@@ -29,12 +29,15 @@ def update(id, data):
     products_collection.update_one({"_id": id}, {"$set": data})
 
 #? delete
-
 def delete(id):
-    products_collection.delete_one({"_id": id})
+    return products_collection.delete_one({"_id": id}).deleted_count
 
 
 # ---------------------------- CRUD ----------------------------
+
+# This function is for getting the next iteration id from the data base in the sequence collection
+# for exemple the product_id it check the last one it increment it by 1 ans return it to use in the new product
+
 def get_next_sequence_value(sequence_name):
     sequence_collection = db['sequences']
     sequence_document = sequence_collection.find_one_and_update(
@@ -44,9 +47,6 @@ def get_next_sequence_value(sequence_name):
         return_document=True,
     )
     return sequence_document['sequence_value']
-
-# t = get_next_sequence_value('product_id')
-# print(t)
 
 # products = [
 #   {
