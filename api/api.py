@@ -25,6 +25,7 @@ def select_product(id):
     return read_all_products(id)
 
 
+
 #! -------------- update product -------------------
 @app.route('/api/products/<int:id>', methods=['PATCH'])
 def update_product(id):
@@ -36,6 +37,7 @@ def update_product(id):
     else:
         return jsonify({'message': 'The product is not exist !!'})
 
+
 #? ----------- PUT vs PATCH -----------------------
 #* PUT: It is used to update the entire resource, 
 # replacing the existing resource with the new data provided. 
@@ -44,6 +46,8 @@ def update_product(id):
 #* PATCH: It is used to partially update a resource.
 #  It allows you to update specific fields of the resource without affecting the rest of the data. 
 #? ----------- PUT vs PATCH -----------------------
+
+
 
 #! ----------- delete product -----------------------
 @app.route('/api/products/<int:id>', methods=['DELETE'])
@@ -55,15 +59,3 @@ def delete_product(id):
          return jsonify({'message': 'Product Not Found'})
 
 
-
-# @app.route('/api/products', methods=['POST'])
-# def insert_product():
-#     data = request.get_json()
-#     # create(data)
-#     print(data)
-    # return jsonify(data)
-# @app.route('/data')
-# def get_current_time():
-#     return {
-#             'name': 'ahmed',
-#             'time': time.time()}

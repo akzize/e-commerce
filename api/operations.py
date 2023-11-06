@@ -48,6 +48,7 @@ def get_next_sequence_value(sequence_name):
     )
     return sequence_document['sequence_value']
 
+#! for testing purposes 
 # products = [
 #   {
 #     "name": "Product 1",
