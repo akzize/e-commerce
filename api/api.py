@@ -1,4 +1,3 @@
-import time
 from flask import Flask, jsonify, request
 from operations import read_all_products, create, update, delete
 

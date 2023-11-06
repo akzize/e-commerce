@@ -46,7 +46,21 @@ built using react vite and flask as backend ans mongo atlas as database.
         "stock": 100
     }
     ```
+- update product:
 
+        PATCH: /api/products/{id}
+    ```js
+    new_data = {
+        "name": "Product 1",
+        "description": "Description of Product 1",
+        "price": 19.99,
+        "category": "Electronics",
+        "stock": 100
+    }
+
+- delete product:
+    
+        DELETE: /api/products/{id}
 ---
 
 # Things I've learned:
