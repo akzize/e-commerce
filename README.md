@@ -21,3 +21,36 @@ built using react vite and flask as backend ans mongo atlas as database.
 4. run the project and the server:
     - `npm run dev` for react
     - in other terminal `npm run start-api` for server
+
+---
+
+# APIS
+- get all products. 
+    
+        GET: /api/products
+
+- get product by id
+
+        GET: /api/products/{id}
+
+- insert product
+
+        POST: /api/products
+
+    ```js
+    data = {
+        "name": "Product 1",
+        "description": "Description of Product 1",
+        "price": 19.99,
+        "category": "Electronics",
+        "stock": 100
+    }
+    ```
+
+---
+
+# Things I've learned:
+
+## The epreding operator in python
+- `*Table` : for lists
+- `**obj` : for dictionnaries
