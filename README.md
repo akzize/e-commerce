@@ -22,6 +22,7 @@ built using react vite and flask as backend and mongo atlas as database.
     - `npm run dev` for react
     - in other terminal `npm run start-api` for server
 
+> `"start-api": "cd api && venv\\Scripts\\flask run"`, you have to change it in `package.json` for windows, if you want the server to work.
 ---
 
 # APIS
