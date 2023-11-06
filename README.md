@@ -33,6 +33,10 @@ built using react vite and flask as backend ans mongo atlas as database.
 
         GET: /api/products/{id}
 
+- get product by category
+
+        GET: /api/products/category/{category}
+
 - insert product
 
         POST: /api/products
@@ -61,6 +65,9 @@ built using react vite and flask as backend ans mongo atlas as database.
 - delete product:
     
         DELETE: /api/products/{id}
+
+- categories
+        GET: /api/products/category/{category}
 ---
 
 # Things I've learned:
