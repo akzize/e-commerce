@@ -1,4 +1,6 @@
 import pymongo
+import json
+from urllib.request import urlopen 
 
 #? connect to mongodb
 # conn = pymongo.MongoClient("mongodb+srv://admin:ecommerce_database_2023@database.2dpqfnt.mongodb.net/")
@@ -9,6 +11,7 @@ db = conn["ecommerce"]
 
 #? collection
 products_collection = db["products"]
+categories_collection = db["categories"]
 # print(products_collection.count_documents({}))
 
 # ---------------------------- CRUD ----------------------------
@@ -23,6 +26,14 @@ def read_all_products(id=None):
     id = int(id) if id else None
     condition = {"_id": id} if id else {}
     return list(products_collection.find(condition))
+
+def get_products_by_category(category):
+    condition = {"category": category} if category else {}
+    return list(products_collection.find(condition))
+    
+
+def read_all_categories(category=None):
+    return list(categories_collection.find())
 
 #? update
 def update(id, data):
@@ -86,3 +97,13 @@ def get_next_sequence_value(sequence_name):
 #     "stock": 60
 #   }
 # ]
+
+# url = 'https://fakestoreapi.com/products/categories'
+
+# response = urlopen(url) 
+# # from url in data 
+# data_json = json.loads(response.read()) 
+
+# print(list(data_json))
+
+# print(read_all_categories())

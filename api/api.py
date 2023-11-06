@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from operations import read_all_products, create, update, delete
+from operations import read_all_products, read_all_categories, get_products_by_category, create, update, delete
 
 app = Flask(__name__)
 
@@ -19,11 +19,21 @@ def select_or_insert_products():
         
 
 #! ----------- show product by id ------------------
+@app.route('/api/products/categories')
+def select_or_insert_category():
+    return read_all_categories()
+
+
+#! ----------- show product by id ------------------
 @app.route('/api/products/<int:id>', methods=['GET'])
-def select_product(id):
+def select_product_by_id(id):
     return read_all_products(id)
 
-
+#! ----------- show product by category ------------------
+@app.route('/api/products/category/<category>', methods=['GET'])
+def select_product_by_category(category):
+    # category = request.args.get('category')
+    return get_products_by_category(category)
 
 #! -------------- update product -------------------
 @app.route('/api/products/<int:id>', methods=['PATCH'])
