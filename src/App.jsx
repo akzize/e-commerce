@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [data, setData] = useState({});
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/data').then(res => res.json()).then(data => {
-      setData(data);
-      console.log(data);
+    fetch('/api/products').then(res => res.json()).then(data => {
+      setProducts(data);
+      console.log('data : ',data);
     });
   }, []);
 
@@ -18,7 +18,7 @@ function App() {
 
         ... no changes in this part ...
 
-        <p>The current time is {data.name}.</p>
+        <p>The current time is {products[1]._id}.</p>
       </header>
     </div>
   );
