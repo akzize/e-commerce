@@ -1,25 +1,18 @@
 import { useState, useEffect } from 'react';
-// import logo from './logo.svg';
-import './App.css';
+// for bootstrap components
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductCard from './components/productCard';
 
 function App() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch('/api/products').then(res => res.json()).then(data => {
-      setProducts(data);
-      console.log('data : ',data);
-    });
-  }, []);
 
   return (
     <div className="App">
-      <header className="App-header">
-
-        ... no changes in this part ...
-
-        <p>The current time is {products[1]._id}.</p>
+      <header className="App-header bg-primary alert alert-danger ">
+        skladla
       </header>
+      {/* <ProductCard/> */}
     </div>
   );
 }
