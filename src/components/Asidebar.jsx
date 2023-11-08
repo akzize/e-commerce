@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
+
 const Sidebar = () => {
   const [categories, setCategories] = useState([]);
 
@@ -12,11 +13,11 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <aside className="col-md-2">
-      <h2>Catégories</h2>
+    <aside className="m-0 full-height">
+      <h2 className="alert alert-danger">Catégories</h2>
       <ul>
         {categories.map((category, index) => (
-          <li key={index}>
+          <li key={index} className="category-item">
             <a href="#">{category}</a>
           </li>
         ))}
