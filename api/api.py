@@ -18,7 +18,7 @@ def select_or_insert_products():
              return jsonify({'message': f'The product {id} has been inserted with success'})
         
 
-#! ----------- show product by id ------------------
+#! ----------- show categories ------------------
 @app.route('/api/products/categories')
 def select_or_insert_category():
     return read_all_categories()
