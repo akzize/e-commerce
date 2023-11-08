@@ -4,7 +4,7 @@ from urllib.request import urlopen
 
 #? connect to mongodb
 # conn = pymongo.MongoClient("mongodb+srv://admin:ecommerce_database_2023@database.2dpqfnt.mongodb.net/")
-conn = pymongo.MongoClient("mongodb://localhost:27000/")
+conn = pymongo.MongoClient("mongodb://localhost:27017/")
 
 #? database
 db = conn["ecommerce"]
