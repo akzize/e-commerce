@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 // for bootstrap components
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProductCard from './components/productCard';
 import ProductsContainer from './components/productsContainer';
+
 
 function App() {
   // const [products, setProducts] = useState([]);
 
 
   return (
+
     <div className="App vh-100 w-100 ">
       <header className="App-header">
         skladla

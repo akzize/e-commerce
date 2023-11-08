@@ -1,6 +1,6 @@
 # ecommerce web site 
 
-built using react vite and flask as backend ans mongo atlas as database.
+built using react vite and flask as backend and mongo atlas as database.
 
 ## how to run the project in your machine
 

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 function ProductCard(props) {
   const { category, description, image, price, title } = props.product;
   return (
@@ -16,6 +17,16 @@ function ProductCard(props) {
             <img src="imgs/cart4.svg" alt="" className="" />
             </button>
           <button className="btn btn-success">Details</button>
+=======
+function ProductCard() {
+  return (
+      <div className="card">
+        <div className="card-img">
+          <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
+        </div>
+        <div className="card-body">
+          
+>>>>>>> 34c8b07d9a3f2ca27f01d4764fd6be0acfcc85bf
         </div>
       </div>
   );
