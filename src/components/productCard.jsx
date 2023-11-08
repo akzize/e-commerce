@@ -7,7 +7,7 @@ function ProductCard(props) {
         </div>
         <div className="card-body">
           <h1 className="card-title h6">{title}</h1>
-          <p className="product-price small">{price}</p>
+          {/* <p className="product-price pinned">{category}</p> */}
         </div>
         <div className="card-footer d-flex justify-content-end ">
           <button className="btn btn-dark mx-1 d-flex align-content-center gap-2">
