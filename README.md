@@ -1,6 +1,6 @@
-# ecommerce web site 
+# ecommerce web site
 
-built using react vite and flask as backend and mongo atlas as database.
+built using react vite and flask as backend and mongoDB as database.
 
 ## how to run the project in your machine
 
@@ -19,9 +19,14 @@ built using react vite and flask as backend and mongo atlas as database.
 
 4. run the project and the server:
     - `npm run dev` for react
-    - in other terminal `npm run start-api` for server
-
-> `"start-api": "cd api && venv\\Scripts\\flask run"`, you have to change it in `package.json` for windows, if you want the server to work.
+    - in other terminal `npm run start-server` for server, but befoare that you should make some changes in `package.json`, according to your OS 
+    
+    ```
+    // for linux
+    "start-server": "cd api && venv/bin/flask run",
+    // for windows
+    // "start-server": "cd api && venv\\Scripts\\flask run",
+    ```
 ---
 
 # APIS
