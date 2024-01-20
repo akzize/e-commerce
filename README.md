@@ -4,9 +4,8 @@ built using react vite and flask as backend and mongo atlas as database.
 
 ## how to run the project in your machine
 
-1. clone it
-
-    `git clone https://20020710004430466@dev.azure.com/20020710004430466/e-commerce/_git/e-commerce`
+1. clone this project
+    `git clone https://github.com/akzize/e-commerce.git`
 
 2. navigate to api folder:
     - `cd api`
