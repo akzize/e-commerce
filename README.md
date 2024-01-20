@@ -74,6 +74,6 @@ built using react vite and flask as backend and mongo atlas as database.
 
 # Things I've learned:
 
-## The epreding operator in python
+## The spreading operator in python
 - `*Table` : for lists
 - `**obj` : for dictionnaries
